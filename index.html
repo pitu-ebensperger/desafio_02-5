@@ -20,15 +20,25 @@
 
 <div class="grid-container">
 <!-- NAVBAR ------------------------------------>
-    <div class="navigation"> 
+    <div class="navigation" role="navigation">
         <div class="navbar"> 
         <div class="brand">
             <img src="/assets/img/logo_blanco.png" class="logo" alt="NOISE">
             NOISE</div>
-        <div class="toggle"><i class="fa-solid fa-bars"></i></div>
+            <div class="menu-toggle">
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                  </a>     </div>
         </div>
 
         <div class="menu">
+            <a href="#">Products</a>
+            <a href="#">About</a>
+            <a href="#">FAQ</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <div class="menu menuMobile" id="menuMobile">
             <a href="#">Products</a>
             <a href="#">About</a>
             <a href="#">FAQ</a>
@@ -84,37 +94,32 @@
                 </div>
             </div>
 
-            <div class="card-container">
-                <div class="img-container"><img src="/assets/img/prod1.png" class="card-img-top" alt="Headphones"></div>
-                <div class="card">
-                    <div class="card-top"></div>
-                    <i class="fa-solid fa-circle-plus btn-more "></i>
-                    <div class="card-body">
-                        <h1>Product</h1>
-                    </div>
-                </div>
-            </div>
-
-           
-            <div class="card">
-                <div class="card-body">
-                    <h1>Product</h1>
-                    <p>Description</p>
-                    <a href="#"><div class="btn-product btn-cart">Add to cart</div></a>
-                </div>
-            </div>
         </div>
     </div>
 
 <!-- FOOTER ------------------------------------>
     <div class="footer"> 
+        
         <div class="socials">
             <a href="#"><i class="fa-brands fa-facebook"></i></a>&nbsp
             <a href="#"><i class="fa-brands fa-instagram"></i></a>&nbsp
             <a href="#"><i class="fa-brands fa-twitter"></i></a>&nbsp
+
+            <a href="mailto:contact@noise.com" class="contact-info">&nbsp|&nbsp <i class="fa-regular fa-envelope"></i></a>&nbsp
+            <a href="tel:+999 9999" class="contact-info"><i class="fa-solid fa-phone contact-info"></i></a>&nbsp
+    
         </div>
-        <p>© Noise 2025 &nbsp|&nbsp All Rights Reserved</p>
-    </div>
+       
+        <p>© Noise 2025. All Rights Reserved</p>
+
+        <div class="contactinfo">
+            <a href="mailto:contact@noise.com"><i class="fa-regular fa-envelope"></i><p>contact@noise.com</p></a>
+            <a href="tel:+999 9999"><i class="fa-solid fa-phone"></i><p>+999 9999 999</p></a>
+        </div>
+        
+
+        
+        </div>
 
 </div>
 
@@ -135,6 +140,16 @@ function scrollFunction() {
 function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
+}
+
+
+function myFunction() {
+  var x = document.getElementById("menuMobile");
+  if (x.style.display === "flex") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "flex";
+  }
 }
 </script>
 </body>
