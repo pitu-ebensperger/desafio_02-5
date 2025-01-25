@@ -193,6 +193,7 @@
         position: relative;
         bottom: -210px;
         height: 200px;
+        transition: transform 250ms;
       }
   
     .card-top{
@@ -205,8 +206,8 @@
 
     .card-container:hover .card-top,.card:hover .card-top{
         background:radial-gradient(circle at top center, white, transparent 75%),var(--color-bg-light);
-
         transition: all 1s ease;
+        transform: ;
     }
 
 
