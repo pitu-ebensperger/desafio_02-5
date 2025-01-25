@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Animación</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -12,7 +15,9 @@
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
-    
+
+    <button onclick="topFunction()" id="btn-top" title="Go to top"><i class="fa-solid fa-circle-arrow-up"></i></button>
+
 <div class="grid-container">
 <!-- NAVBAR ------------------------------------>
     <div class="navigation"> 
@@ -30,20 +35,104 @@
 
 <!-- MAIN ------------------------------------>
     <div class="main"> 
+        <div class="product-grid">
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-img-top"></div>
+                    <div class="card-top">ss</div>
+                    <i class="fa-solid fa-circle-plus btn-more" id="product-more"></i>
+                    <div class="card-body">
+                        <h1>Product</h1>
+                    </div>
+                </div>
+            </div>
 
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-img-top"></div>
+                    <div class="card-top">ss</div>
+                    <i class="fa-solid fa-circle-plus btn-more "></i>
+                    <div class="card-body">
+                        <h1>Product</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-img-top"></div>
+                    <div class="card-top">ss</div>
+                    <i class="fa-solid fa-circle-plus btn-more "></i>
+                    <div class="card-body">
+                        <h1>Product</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-img-top"></div>
+                    <div class="card-top">ss</div>
+                    <i class="fa-solid fa-circle-plus btn-more "></i>
+                    <div class="card-body">
+                        <h1>Product</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-img-top"></div>
+                    <div class="card-top">ss</div>
+                    <i class="fa-solid fa-circle-plus btn-more "></i>
+                    <div class="card-body">
+                        <h1>Product</h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-img-top"></div>
+                <div class="card-top">ss</div>
+                <div class="card-body">
+                    <h1>Product</h1>
+                    <p>Description</p>
+                    <a href="#"><div class="btn-product btn-cart">Add to cart</div></a>
+                </div>
+            </div>
+        </div>
     </div>
 
 <!-- FOOTER ------------------------------------>
     <div class="footer"> 
-        <span>
-            <i class="fa-brands fa-facebook"></i><span>&nbsp</span>
-            <i class="fa-brands fa-instagram"></i></span>
-        <p>All Rights Reserved 2025.</p>
+        <div class="socials">
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>&nbsp
+            <a href="#"><i class="fa-brands fa-instagram"></i></a>&nbsp
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>&nbsp
+        </div>
+        <p>All Rights Reserved</p>
     </div>
 
 </div>
 
 
+<script>
+let mybutton = document.getElementById("btn-top");
 
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
 </body>
 </html>
