@@ -1,0 +1,265 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* GENERAL */
+
+
+/* NAVEGACION ------------------ */
+
+.navigation{
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    background:#382c52;
+    color: #f5f7f8;
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background:#382c52;
+    color: #f5f7f8;
+    margin: 0;
+    padding: 10px;
+    font-size: 24px;
+    width: 100%;
+}
+
+.menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px 0;
+    font-weight: 300;
+    row-gap: 10px;
+}
+
+.navigation > .navbar > a, .navigation > .menu > a{
+    color: #e3deed;
+}
+
+.brand{
+    display: flex;
+    justify-content: flex-start;
+    width: 80%;
+}
+
+/* MAIN ------------------ */
+
+.main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    background: white;
+    color: #33434a;
+}
+
+.filter{
+    grid-area: filter;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    flex-direction: column;
+    background:#e3deed;  
+    color:#6d5e8e;    
+}
+
+    .filter>span{
+        font-size: 16px;
+        padding-bottom: 5px;
+    }
+select{
+    border-radius: 20px;
+    padding: 3px 15px;
+    border: 1px solid #6d5e8e9a;
+    background:#e3deed;  
+}
+  
+.product-grid{
+    display: grid;
+    justify-items: center;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    row-gap: 25px;
+    padding: 20px;
+    min-width: 100%;
+}
+
+.card{
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+    .card-img-top{
+        width: 100%;
+        max-height: 75%;
+        object-fit: cover;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .card-body{
+        max-width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: #382c52;
+        font-size: 20px;
+        row-gap: 10px;
+        padding: 30px;
+    }
+
+.btn-primary{
+    background:#382c52;
+    border-radius: 20px;
+    border:none;
+    padding: 5px 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+
+.pagination>li>a{
+    color: #6d5e8e;
+    background: #e3deed;
+    font-weight: 400;
+}
+
+.pagination>li>a:focus, .pagination>li>a:hover, .pagination>li>span:focus, .pagination>li>span:hover {
+    z-index: 2;
+    color: #e3deed;
+    background-color: #6d5e8e;
+    border-color: #ddd;
+    font-weight: 600;
+}
+
+/* FOOTER ------------------ */
+.footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #e3deed;
+    color: #382c52;
+    padding: 15px;
+    min-height: 60px;
+   
+}
+
+
+
+
+
+/* DISPOSITIVO LARGE ------------------------------------------------------ */
+@media (min-width: 576px) {
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 82%;
+        grid-template-areas: 
+        "nav filter"
+        "nav main"
+        "footer main";
+        
+      }
+    
+    .brand{
+        width: 100%;
+        justify-content: center;
+    }
+    .toggle{
+        display: none;
+    }
+    .main{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    select{
+        width: 80%;
+    }
+      .product-grid{
+        grid-template-columns: repeat(4, 1fr);
+        margin: 20px;
+        max-width: 100%;
+       overflow-x: scroll;
+       column-gap: 20px;
+       justify-content: flex-start;
+    }
+      .navbar{
+        border-radius: 0;
+      }
+
+      .card-body{
+        padding: 20px 0;
+        font-size: 18px;
+      }
+
+      .card{
+        width: 100%;
+        min-width: 170px;
+      }
+
+      .card-img-top{
+        width: 100%;
+        max-height: 200px;
+      }
+      .btn-primary{
+        padding: 5px 10px;
+    }
+}
+
+
+
+/* DISPOSITIVO SMALL ------------------------------------------------------ */
+@media (max-width: 576px) {
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-areas: 
+        "nav"
+        "filter"
+        "main"
+        "footer";
+      }
+
+      .product-grid{
+        grid-template-columns: 1fr;
+        height: 590px;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .card{
+        max-width: 100%;
+        width: 400px;
+        height: 550px;
+        }
+}
