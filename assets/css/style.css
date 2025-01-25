@@ -177,9 +177,7 @@
     position: relative;
   }
 
-  .card-container:hover{
 
-  }
 
   .card{
       display: flex;
@@ -267,7 +265,6 @@
             font-weight: 400;
     }
 
-    .btn-moremore{}
     .card-more{
         text-align: center;
         display: flex;
@@ -454,14 +451,7 @@
           border-radius: 0;
         }
   
-        .card-body{
-          
-        }
-  
-        .card{
-        }
-  
-        
+
         .btn-primary{
           padding: 5px 10px;
       }
@@ -503,10 +493,7 @@
           display: none;
       }
   
-    
-        .card-body{
-            
-        }
+ 
     #btn-top {
             display: none;
             position: fixed;
