@@ -507,6 +507,10 @@
       #btn-top {
         display: none;
       }
+
+      .menuMobile{
+        display:none
+      }
     
   }
   
@@ -579,5 +583,5 @@
 
      
       }
-  }
+  
 
